@@ -1,0 +1,19 @@
+app "PLA Configurator"
+window 1200 800
+
+serialDevicePicker
+baudRate 115200
+
+field "Barometric Pressure"
+field "Target Height"
+field "Canopy Size"
+field "Descent Rate"
+
+button "Connect"
+button "Read Device"
+button "Write Config"
+button "Start Log"
+button "Export Log"
+
+logView
+dataTable "Altitude Samples"
