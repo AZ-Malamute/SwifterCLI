@@ -1,0 +1,7 @@
+{
+  "project": "SA Lite 002",
+  "generated_by": "SwifterCLI",
+  "purpose": "First proof that Swifter can turn intent into project structure.",
+  "status": "seed_created",
+  "next": "Generate SwiftUI skeleton"
+}
