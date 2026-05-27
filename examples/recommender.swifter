@@ -1,0 +1,5 @@
+app "Swifter Recommender"
+window 1200 800
+button "Search"
+button "Show Recommendations"
+button "Export Proof Packet"
