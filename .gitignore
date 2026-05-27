@@ -10,3 +10,8 @@ DerivedData/
 *.mobileprovision
 PRIVATE/
 ORION_LOCAL/
+
+# Local catalog/data for private recommender proof
+Swifter_Recommender/Data/
+Swifter_Recommender/Data/*
+*.zip
