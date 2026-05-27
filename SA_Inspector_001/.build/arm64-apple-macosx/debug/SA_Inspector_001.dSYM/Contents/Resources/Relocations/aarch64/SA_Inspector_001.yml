@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector_001/.build/arm64-apple-macosx/debug/SA_Inspector_001'
+relocations:     []
+...

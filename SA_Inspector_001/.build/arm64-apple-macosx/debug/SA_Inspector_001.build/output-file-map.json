@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector_001/.build/arm64-apple-macosx/debug/SA_Inspector_001.build/master.swiftdeps"
+  },
+  "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector_001/Sources/SA_Inspector_001/main.swift": {
+    "dependencies": "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector_001/.build/arm64-apple-macosx/debug/SA_Inspector_001.build/main.d",
+    "object": "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector_001/.build/arm64-apple-macosx/debug/SA_Inspector_001.build/main.swift.o",
+    "swiftmodule": "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector_001/.build/arm64-apple-macosx/debug/SA_Inspector_001.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector_001/.build/arm64-apple-macosx/debug/SA_Inspector_001.build/main.swiftdeps",
+    "diagnostics": "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector_001/.build/arm64-apple-macosx/debug/SA_Inspector_001.build/main.dia"
+  }
+}
