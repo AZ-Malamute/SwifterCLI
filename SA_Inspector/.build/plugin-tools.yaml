@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "SA_Inspector-arm64-apple-macosx15.0-debug.exe": ["<SA_Inspector-arm64-apple-macosx15.0-debug.exe>"]
+  "SA_Inspector-arm64-apple-macosx15.0-debug.module": ["<SA_Inspector-arm64-apple-macosx15.0-debug.module>"]
+  "main": ["<SA_Inspector-arm64-apple-macosx15.0-debug.exe>","<SA_Inspector-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<SA_Inspector-arm64-apple-macosx15.0-debug.exe>","<SA_Inspector-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/Sources/SA_Inspector/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector":
+    is-mutated: true
+commands:
+  "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector-entitlement.plist"]
+    description: "Write auxiliary file /Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector-entitlement.plist"
+
+  "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/Sources/SA_Inspector/main.swift"]
+    outputs: ["/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/sources"]
+    description: "Write auxiliary file /Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/sources"
+
+  "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/main.swift.o"]
+    outputs: ["/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.product/Objects.LinkFileList"
+
+  "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<SA_Inspector-arm64-apple-macosx15.0-debug.exe>":
+    tool: phony
+    inputs: ["<SA_Inspector-arm64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    outputs: ["<SA_Inspector-arm64-apple-macosx15.0-debug.exe>"]
+
+  "<SA_Inspector-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/main.swift.o","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/Modules/SA_Inspector.swiftmodule"]
+    outputs: ["<SA_Inspector-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.SA_Inspector-arm64-apple-macosx15.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/main.swift.o","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.product/Objects.LinkFileList"]
+    outputs: ["/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/SA_Inspector"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug","-o","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector","-module-name","SA_Inspector","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_SA_Inspector_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx15.0","-Xlinker","-add_ast_path","-Xlinker","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/Modules/SA_Inspector.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.SA_Inspector-arm64-apple-macosx15.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector-entitlement.plist"]
+    outputs: ["<SA_Inspector-arm64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/SA_Inspector"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector-entitlement.plist","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector"]
+
+  "C.SA_Inspector-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/Sources/SA_Inspector/main.swift","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/sources"]
+    outputs: ["/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/main.swift.o","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/Modules/SA_Inspector.swiftmodule"]
+    description: "Compiling Swift Module 'SA_Inspector' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","SA_Inspector","-emit-dependencies","-emit-module","-emit-module-path","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/Modules/SA_Inspector.swiftmodule","-output-file-map","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/output-file-map.json","-incremental","-c","@/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/sources","-I","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx15.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j16","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","SA_Inspector_main","-parse-as-library","-color-diagnostics","-swift-version","6","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","sa_inspector"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/Sources/SA_Inspector/","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/Package.swift","/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

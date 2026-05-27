@@ -1,0 +1,6 @@
+app "SA Inspector"
+
+window 1200 800
+
+button "Start Inspection"
+button "Generate Report"

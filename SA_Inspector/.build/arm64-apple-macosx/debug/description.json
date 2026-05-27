@@ -1,0 +1,267 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.SA_Inspector-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/sources",
+      "importPath" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/Sources/SA_Inspector/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "SA_Inspector",
+      "moduleOutputPath" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/Modules/SA_Inspector.swiftmodule",
+      "objects" : [
+        "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx15.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j16",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "SA_Inspector_main",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "6",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "sa_inspector"
+      ],
+      "outputFileMapPath" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/Modules/SA_Inspector.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/Sources/SA_Inspector/main.swift"
+      ],
+      "tempsPath" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "SA_Inspector" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "SA_Inspector",
+      "-package-name",
+      "sa_inspector",
+      "-c",
+      "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/Sources/SA_Inspector/main.swift",
+      "-I",
+      "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx15.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j16",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "SA_Inspector_main",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "6",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "sa_inspector",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "SA_Inspector" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector-entitlement.plist"
+    },
+    "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/Sources/SA_Inspector/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/sources"
+    },
+    "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/SA_Inspector.product/Objects.LinkFileList"
+    },
+    "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/greg/Projects/Swifter/SwifterCLI/SA_Inspector/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}
